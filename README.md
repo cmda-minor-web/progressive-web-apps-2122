@@ -24,6 +24,32 @@
 ## Description
 In this course we convert the client side web application, made during the Web App From Scratch course, into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Finally we’ll implement a series of optimisations to improve the performance of the application.  
 
+## Week 1
+
+### How to get the server up and running 
+#### Installation
+To install this application you need to have `NodeJS` and `NPM` installed on your device.
+
+##### How to get this to your machine?
+
+Clone this repo to your computer with the following command
+```
+git clone https://github.com/basv1996/progressive-web-apps-2122.git
+```
+In the command line type the following code to download 
+
+```
+npm install
+```
+this will install all the packages you need to run this application 
+
+#### Starting the server
+The application should start autamatically if not then try the following.
+```bash
+npm run start
+```
+The application will be running on port 3000. So you'll have to go to localhost:3000
+
 ## Communication
 - [Github](https://github.com/cmda-minor-web/progressive-web-apps-2122)
 - [Microsoft Teams](https://teams.microsoft.com/l/channel/19%3aacf0946687dc4ba9a9400fb7c6d7a81c%40thread.tacv2/05%2520-%2520Progressive%2520Web%2520Apps)
