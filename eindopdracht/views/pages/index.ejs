@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<%- include('../partials/head') %>
+</head>
+<body>
+    <header>
+        <h1><a href=".">Healthy Checker</a></h1>
+    </header>
+    <main>
+        <section id="choseYourMethod" class="choseYourMethod">
+            <article class="scanCode">
+                <button type="button">Scan Barcode</button> 
+            </article>
+            <article class="fillInYourself">  
+                <button type="button">Fill in your barcode</button>    
+                </article>
+        </section>
+        <section id="barCodeScannerSection" class="hidden barCodeScannerSection">
+            <div class="LoaderContainer">
+            <div class="loader">
+               </div>
+               <p>Loading . . .</p>
+               </div>
+            <ul id="barcode-list"></ul>
+            <ul id="links"></ul>
+        </section>
+        <section id="fillInYourselfSection" class="hidden fillInYourselfSection">
+            <form action="#">
+                <label>Search product by barcode</label>
+                <input class="inputSearch" type="number" maxlength="15" minlength="8" placeholder="8710624030667">
+                <input type="submit" value="search">
+            </form>
+            <a href="." class="backToOriginal">Back To home</a>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
