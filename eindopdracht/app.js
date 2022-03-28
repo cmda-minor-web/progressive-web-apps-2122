@@ -2,6 +2,7 @@
 const express = require("express")
 const process = require("process")
 const app = express()
+const path = require('path')
 require("dotenv").config();
 
 
@@ -14,10 +15,10 @@ const router = require("./routes/route.js");
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
-// app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));
 
 // // //using static files
-// // app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 
 
 app.listen(3000)
@@ -37,4 +38,11 @@ app.use(function (err, req, res) {
     console.error(err.stack);
     res.status(500).send("Something broke!");
   });
+
+  app.use(function (err, req, res) {
+    res.status(404).render('pages/404', {
+        title: 'this page does not exist'
+    });
+  });
+
 

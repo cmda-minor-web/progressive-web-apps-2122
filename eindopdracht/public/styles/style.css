@@ -27,104 +27,13 @@ body header h1 {
     color: #fff;
 }
 
-main section {
-	background-color: #dafae3;
-	height: calc(100vh - 5em);
-	margin: 0 auto;
-	padding: 2em 0;
-}
-
-main section:first-child{
+section.popular .results  {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 1em;
+    overflow-x: scroll;
+    scrollbar-color: #fff0;
 }
 
-main section:first-child article button,
-.backToOriginal 
-{
-    box-shadow: 3px 4px 6px #000;
-    padding: .5em 1.5em ;
-    background-color: yellow;
-    border: 2px solid grey;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 700;
-    color: rgb(24, 24, 24);
+section.popular img{
+    width: 100px;
 }
-
-
-video {
-    width: 100%;
-    height: calc(100vh -5em);
-
-}
-
-.toTheRight{
-    margin-left: 1em;
-}
-
-.product {
-    max-width: 80vw;
-    margin: 0 auto;
-}
-
-.product img{
-    max-width: 100%;
-}
-
-/* .backToOriginal {
-    border: 4px dotted blue;
-    padding: 1em;
-    cursor: pointer;
-    margin: 1em 0 0 0;
-} */
-
-.hidden {
-    display: none!important;
-}
-
-.fillInYourselfSection {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.fillInYourselfSection form {
-	display: flex;
-	flex-direction: column;
-	max-width: 80vw;
-	margin: 0 auto;
-}
-
-.fillInYourselfSection form > * {
-	margin: 1em 0;
-}
-
-.fillInYourselfSection .backToOriginal {
-	width: 170px;
-}
-
-.LoaderContainer {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	grid-gap: 1em;
-}
-
-.loader {
-    width: 150px;
-    height: 150px;
-    border: 15px solid lightblue;
-    border-top: 15px solid blue;
-    border-radius: 50%;
-    animation: draaien 2s linear infinite;
-}
-
-
-@keyframes draaien {
-    to {
-        transform: rotate(360deg);
-    }
-} 

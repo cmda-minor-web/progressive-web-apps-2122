@@ -1,0 +1,18 @@
+<section>
+    <h2>Single movie page</h2>
+    <div class="results">
+        <%= console.log("resulatten zijn: ", results) %>
+         <h2> <%= results.single_movie['original_title'] %></h2>
+         <p>overview: <%= results.single_movie['overview'] %></p>
+         <p>release: <%= results.single_movie['release_date'] %></p>
+         <img src="https://image.tmdb.org/t/p/w500/<%= results.single_movie['backdrop_path'] %> "/>
+
+         <%= console.log("hello: ", results.single_movie) %>
+        </div>
+
+
+
+
+
+</section>
+

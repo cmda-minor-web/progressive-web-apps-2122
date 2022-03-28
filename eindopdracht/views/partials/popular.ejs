@@ -1,0 +1,20 @@
+<section class="popular">
+    <h2>Popular</h2>
+    <div class="results">
+     <% results.movies.forEach((movie)=> { %>
+        <a href="movies/<%=movie.id%>">
+            <!-- <h3>
+                <%= movie.title %>
+            </h3> -->
+            <img src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %> " />
+        </a>
+    <% }) %>
+  
+        </div>
+
+<%- console.log("resultaten zijn", results.movies)%>
+
+<%- console.log("titels zijn", results.movies.map(movie => movie.title))%>
+
+</section>
+
