@@ -39,6 +39,12 @@ router.get("/", function (req, res) {
 })
 
 
+router.get('/offline', (req, res) => {
+	res.render('pages/offline', {
+		title: '404 Not Found',
+	});
+});
+
   // .then(async response => {
   //   const movieData = await response.json()
   //   res.render('pages/index', {
