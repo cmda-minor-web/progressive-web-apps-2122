@@ -1,7 +1,7 @@
 {
-    
     "version": "1.0.0", 
     "name": "movie database PWA",
+    "short_name": "HvA movie DB",
     "icons": [
         {
           "src": "/images/icons/manifest-icon-192.maskable.png",

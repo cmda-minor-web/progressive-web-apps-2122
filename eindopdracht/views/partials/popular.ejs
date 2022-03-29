@@ -1,5 +1,5 @@
 <section class="popular">
-    <h2>Popular</h2>
+    <h2>Popular Movies</h2>
     <div class="results">
      <% results.movies.forEach((movie)=> { %>
         <a href="movies/<%=movie.id%>">
@@ -7,14 +7,15 @@
                 <%= movie.title %>
             </h3> -->
             <img alt="Movie poster for <%= movie['original_title'] %>" src="https://image.tmdb.org/t/p/w200<%= movie.poster_path %> " />
+            <p><%= movie.vote_average %></p>
         </a>
     <% }) %>
   
         </div>
 
-<%- console.log("resultaten zijn", results.movies)%>
+<%- //console.log("resultaten zijn", results.movies)%>
 
-<%- console.log("titels zijn", results.movies.map(movie => movie.title))%>
+<%- //console.log("titels zijn", results.movies.map(movie => movie.title))%>
 
 </section>
 

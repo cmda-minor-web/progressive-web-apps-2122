@@ -6,10 +6,22 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/images/MovieBackground.jpeg');
+    color: darkorange;
+    text-shadow: 1px 1px 1px #000;
+    height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: #dc1E0B;
 }
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: .5em;
+}
+
 body header {
     box-shadow: 2px 2px 15px black;
     position: relative;
@@ -30,11 +42,31 @@ body header h1 {
     color: #fff;
 }
 
+main {
+    max-width: 90vw;
+    margin: 1em auto;
+}
+
 section.popular .results  {
     display: flex;
     gap: 1em;
     overflow-x: scroll;
     scrollbar-color: #fff0;
+}
+
+section.popular .results a {
+    position: relative;
+}
+
+section.popular .results p {
+    position: absolute;
+    top: 0;
+    background-color: darkblue;
+    padding: 0.3em;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #eee;
+    border: 2px solid darkblue;
+    color: darkorange;
 }
 
 section.popular img{
@@ -43,7 +75,27 @@ section.popular img{
 
 .results img {
     width: 100vw;
-    height: 100%;
     max-width: 500px;
+}
 
+/* Back button */
+
+.backBtn {
+    padding-left: 15px;
+    font-size: 3em;
+}
+
+/* Single product page */
+
+.result_single {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result_single div img {
+    width: 100%;
+}
+
+.result_single .movie_data > * {
+    margin-bottom: 1em;
 }

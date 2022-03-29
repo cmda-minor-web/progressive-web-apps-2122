@@ -29,7 +29,7 @@ router.get("/", function (req, res) {
         fetch(`https://api.themoviedb.org/3/movie/${req.params.id}?api_key=${process.env.API_KEY}`)
         .then(response => response.json())
         .then((movie) => {
-          console.log("movie id is: ", movie.id)
+          //console.log("movie id is: ", movie.id)
           const results = {single_movie: movie};
            res.render('pages/single_product_page.ejs', {
             title: 'single product page',
@@ -45,40 +45,31 @@ router.get('/offline', (req, res) => {
 	});
 });
 
-  // .then(async response => {
-  //   const movieData = await response.json()
-  //   res.render('pages/index', {
-  //     title: 'Movies',
-  //     movieData,
-  //     //revManifest
-  //   });
-  // })
-//})
-
-// app.get('/movies', (req, res) => {
-//   fetch(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${process.env.MOVIEDB_TOKEN}`)
-//     .then(async response => {
-//       const movieData = await response.json()
-//       res.render('overview', {
-//         title: 'Movies',
-//         movieData,
-//         revManifest
-//       });
-//     })
-// })
+  
 
 
-
-
-
-// router.post("/search", async(req, res) => {
-//   //const query = req.body.SearchQueryFromInput
+// router.get("/search", async(req, res) => {
 //   const apiKey = process.env.API_KEY
 
 //   const apiURL = `http://www.omdbapi.com/?apikey=`+ apiKey +`&`
 // })
 
 
+app.get('/search', (req, res) => {
+  fetch(`https://api.themoviedb.org/3/movie?query=${req.query.searchMovie}?api_key=${process.env.API_KEY}`)
+  .then(async response => { 
+    const movieData = await  response.json()
+    console.log("mijn movie data is: ", movieData)
+    
+    res.render('pages/searchResults', {
+    title: req.query.searchMovie,
+    movieData 
+  })
+        
+    })
+  })
+
+ 
 //route for 404 page
 router.get("*", function (req, res) {
     res.render("pages/404", {
@@ -88,4 +79,3 @@ router.get("*", function (req, res) {
 
 
 module.exports = router;
-

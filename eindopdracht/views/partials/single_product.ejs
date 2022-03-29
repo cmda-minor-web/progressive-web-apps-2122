@@ -1,18 +1,12 @@
-<section>
-    <h2>Single movie page</h2>
-    <div class="results">
-        <%= console.log("resulatten zijn: ", results) %>
-         <h2> <%= results.single_movie['original_title'] %></h2>
-         <p>overview: <%= results.single_movie['overview'] %></p>
-         <p>release: <%= results.single_movie['release_date'] %></p>
-         <img alt="Movie poster for <%= results.single_movie['original_title'] %>" src="https://image.tmdb.org/t/p/w500/<%= results.single_movie['backdrop_path'] %>" />
+<section class="result_single">
+    <div > 
+        <img alt="Movie poster for <%= results.single_movie['original_title'] %>" src="https://image.tmdb.org/t/p/w500/<%= results.single_movie['backdrop_path'] %>" />
+       </div>
+    <div class="movie_data">
+    <h2> <%= results.single_movie['original_title'] %></h2>
+    <p><b>release:</b> <%= results.single_movie['release_date'] %></p>
+    <p><b>overview:</b> <%= results.single_movie['overview'] %></p>
 
-         <%= console.log("hello: ", results.single_movie) %>
-        </div>
-
-
-
-
-
+    </div>
+   
 </section>
-

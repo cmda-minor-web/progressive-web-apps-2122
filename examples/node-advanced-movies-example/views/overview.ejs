@@ -3,11 +3,11 @@
 <h1><%= title %></h1>
 
 <ul class="movie-list">
-    <% movieData.results.forEach(result => { %>
+    <% results.movies.forEach(results => { %>
         <li>
-            <a href="/movies/<%= result.id %>" class="movie-poster body-petite">
-                <%= result.original_title %>
-                <img src="https://image.tmdb.org/t/p/w500/<%= result.poster_path %>" alt="Movie poster of <%= result.original_title %>." class="movie-poster__image">
+            <a href="/movies/<%= results.id %>" class="movie-poster body-petite">
+                <%= results.original_title %>
+                <img src="https://image.tmdb.org/t/p/w500/<%= results.poster_path %>" alt="Movie poster of <%= results.original_title %>." class="movie-poster__image">
             </a>
         </li>
     <% }) %>

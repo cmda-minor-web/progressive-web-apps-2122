@@ -1,22 +1,13 @@
+const cacheName = 'v1';
 
-// Maintain Cache Versions
-const CURRENT_CACHES = {
-    font: "google-font-cache-v3"
-  };
-
-
-  const cacheName = 'TMDB_Cache_v1';
-
-  // Default files to always cache
-const cacheFiles = [
-    '/scripts/bundle.js',
+const cacheAssets = [
 	'/styles/style.css',
-    '/manifest.json',
-    '/pages/offline',
-    'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap',
-	'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic'
-]
-
+	'/scripts/main.js',
+	'/manifest.json',
+	'/',
+	'/offline',
+    'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap'
+];
 
 // Call Install Event
 self.addEventListener('install', e => {
@@ -27,7 +18,7 @@ self.addEventListener('install', e => {
 			.open(cacheName)
 			.then(cache => {
 				console.log('Service Worker: Caching Files');
-				return cache.addAll(cacheFiles);
+				return cache.addAll(cacheAssets);
 			})
 			.then(() => self.skipWaiting())
 			.catch(err => console.log(err))
@@ -68,25 +59,4 @@ self.addEventListener('fetch', e => {
 	);
 });
 
-
-
-// self.addEventListener('install', (e) => {
-//     console.log('[Service Worker] Install');
-//   });
-
-
-//   self.addEventListener('install', function(e) {
-//     console.log('[ServiceWorker] Installed');
-
-//     // e.waitUntil Delays the event until the Promise is resolved
-//     e.waitUntil(
-
-//     	// Open the cache
-// 	    caches.open(cacheName).then(function(cache) {
-
-// 	    	// Add all the default files to the cache
-// 			console.log('[ServiceWorker] Caching cacheFiles');
-// 			return cache.addAll(cacheFiles);
-// 	    })
-// 	); // end e.waitUntil
-// });
+//if statement voor alleen html pages
