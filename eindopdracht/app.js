@@ -6,21 +6,22 @@ const path = require('path')
 require("dotenv").config();
 
 
-//this will sorve static files from public folder
+//this will serve static files from public folder
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
+//make a router variable and require it
 const router = require("./routes/route.js");
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// // //using static files
+ //using static files
 app.use(express.static(__dirname + "/public"));
 
-
+// Make the app run on port 3000
 app.listen(3000)
 
 

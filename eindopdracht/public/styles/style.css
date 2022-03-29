@@ -59,14 +59,16 @@ section.popular .results a {
 }
 
 section.popular .results p {
-    position: absolute;
-    top: 0;
-    background-color: darkblue;
-    padding: 0.3em;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px #eee;
-    border: 2px solid darkblue;
-    color: darkorange;
+	position: absolute;
+	top: 0;
+	background-color: darkblue;
+	padding: 0.3em;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px #eee;
+	border: 2px solid darkblue;
+	color: darkorange;
+	min-width: 2em;
+	text-align: center;
 }
 
 section.popular img{
